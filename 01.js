@@ -11,8 +11,19 @@ function soloNumeros(array) {
   // soloNumeros([1, 'Henry', 2]) debe retornar [1, 2]
 
   // Tu código aca:
-
+   for(var i = 0; i < array.length; i++){
+           if (typeof array[i] == 'string'){
+                  delete array[i];
+           }
+  }
+  return array;
 }
+
+
+var array = [4,'Isa',44,'Prueba'];
+var miArray = soloNumeros(array);
+
+
 
 // No modifiques nada debajo de esta linea //
 
