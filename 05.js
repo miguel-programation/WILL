@@ -21,12 +21,6 @@ function pluck(array, name) {
   
 
   
-  /* for(i = 0; i < array.length; i++){
-        if (array[i].name == name){
-              return array[i];
-        } 
-  } */
-
 }
 
 var array = [{ name: 'TV LCD', price: 100}, { name: 'Computadora', price: 500 }];
