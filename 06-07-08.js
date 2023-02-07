@@ -11,6 +11,10 @@ function crearClasePersona() {
       // Inicializar las propiedades de la persona con los valores recibidos como argumento
 
       // Tu código aca:
+      this.nombre = nombre;
+      this.edad = edad;
+      this.hobbies = hobbies;
+      this.amigos = amigos;
 
     }
 
@@ -20,6 +24,11 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+      
+     // console.log(this.amigos.nombre);
+     let miami = {nombre, edad}; 
+     this.amigos.push(miami);
+     //console.log(this.amigos);
 
     }
 
@@ -28,8 +37,10 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
-
+     this.hobbies.push(hobby);
+     //console.log(this.hobbies);
     }
+    
     getFriends() {
       // El método 'getFriends' debe retornar un arreglo con sólo los nombres del arreglo de amigos
       // de la persona.
@@ -38,7 +49,9 @@ function crearClasePersona() {
       // persona.getFriends() debería devolver ['martin', 'toni']
 
       // Tu código aca:
-
+      var tranfor = ((amigo) => amigo.nombre);
+      var indexx = this.amigos.map(tranfor);
+      return indexx;
     }
 
     getHobbies() {
@@ -47,7 +60,7 @@ function crearClasePersona() {
       // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
-
+      return this.hobbies;  
     }
 
     getPromedioEdad() {
@@ -66,12 +79,25 @@ function crearClasePersona() {
       // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
 
       // Tu código aca:
-
+      return this.amigos.map(amigo => amigo.edad).reduce((a, b) => a + b) / this.amigos.length;
     }
+   
   };
+    
+    var hobbies = ['pintar', 'cantar', 'basketball'];
+    var amigos = [{nombre: 'martin', edad: 31},{nombre: 'toni', edad: 33}];
+    var miGente = new Persona('Adrina', 15, hobbies, amigos);
+    miGente.addFriend('Alejandra',15);
+    miGente.addHobby('programar');
+    console.log(miGente.getFriends());
+    console.log(miGente.getHobbies());
+    console.log(miGente.getPromedioEdad());
 
   return Persona;
 }
+
+crearClasePersona();
+
 
 // No modifiques nada debajo de esta linea //
 
